@@ -1,0 +1,6 @@
+.fruit img{
+    display: flex;
+    
+    width: 400px;
+    height: auto;
+}
