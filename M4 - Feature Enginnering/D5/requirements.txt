@@ -1,0 +1,2 @@
+chime==0.6.0
+streamlit
