@@ -1,0 +1,21 @@
+import opencv
+impor numpy as np
+
+make function to get video
+	read it frame by frame
+
+
+get gray scale of copy of frame
+	boost contrast
+	switch colours?
+	reduce noice -->
+		how? 
+			maybe through gaussian blur?
+			region of interest(crop)
+			background substractor
+			hugh lines?
+			(we could use sliding bars to check these params maybe)
+
+	apply canny --> then find contours
+	
+overlap the lane lines on to the original frame
