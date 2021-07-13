@@ -1,0 +1,12 @@
+#:include mapview.kv
+
+BoxLayout:
+    orientation: 'vertical'
+    MDToolbar:
+        title: 'Test'
+        right_action_items: [['dots-vertical', lambda x: app.give_results.open()]]
+        md_bg_color: app.theme_cls.accent_color
+
+
+    MapView:
+        id: mapview
