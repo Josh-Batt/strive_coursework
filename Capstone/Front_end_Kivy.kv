@@ -1,0 +1,157 @@
+WindowManager:
+    MainWindow:
+    ProfileWindow:
+    RequestWindow:
+    FindingWindow:
+
+<MainWindow>:
+    name: 'main'
+
+    BoxLayout:
+        orientation: 'vertical'
+        # Label:
+        #     text: 'Face2Face'
+        #     color: 'black'
+        #     background_color: 1, 1, 1, 1
+
+        Image:
+            source: 'D:\My_Docs\Local_Folders\Capstone\Logos_Graphics/Logo2.png'
+            allow_stretch: True
+        Button:
+            text: 'My Profile'
+            background_color: 0, 0, 0, 1
+            size_hint: 1, .5
+            #pos_hint: {'center_x': .5}
+            
+            on_release: 
+                app.root.current = 'profile'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'My Requests'
+            background_color: 0, 0, 0, 1
+            size_hint: 1, .5
+            #pos_hint: {'center_x': .5}
+            on_release: 
+                app.root.current = 'request'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'Matching'
+            background_color: 0, 0, 0, 1
+            size_hint: 1, .5
+            #pos_hint: {'center_x': .5}
+            on_release: 
+                app.root.current = 'finding'
+                root.manager.transition.direction = 'left'
+                #app.load_face2face()
+
+<ProfileWindow>:
+    name: 'profile'
+
+    GridLayout:
+        cols: 2
+        rows: 4
+
+        Button:
+            text: 'Go Back'
+            background_color: 0, 0, 0, 1
+            #size_hint: .3, .3
+            on_release: 
+                app.root.current = 'main'
+                root.manager.transition.direction = 'right'
+        Label:
+            text: 'Profile'
+            color: 'black'
+            background_color: 1, 1, 1, 1
+        
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/profile_pics/user1_pic1_pp_1.jpg'
+            allow_stretch: True
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/profile_pics/user1_pic2_pp_1.jpg'
+            allow_stretch: True
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/profile_pics/user1_pic3_pp_1.jpg'
+            allow_stretch: True
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/profile_pics/user1_pic4_pp_1.jpg'
+            allow_stretch: True
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/profile_pics/user1_pic5_pp_1.jpg'
+            allow_stretch: True        
+
+<RequestWindow>:
+    name: 'request'
+    GridLayout:
+        cols: 2
+        rows: 4
+
+        Button:
+            text: 'Go Back'
+            background_color: 0, 0, 0, 1
+            #size_hint: .3, .3
+            on_release: 
+                app.root.current = 'main'
+                root.manager.transition.direction = 'right'
+        Label:
+            text: 'Requests'
+            color: 'black'
+            background_color: 1, 1, 1, 1
+        
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/request_pics/user1_pic1_request_1.jpg'
+            allow_stretch: True   
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/request_pics/user1_pic2_request_1.jpg'
+            allow_stretch: True   
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/request_pics/user1_pic3_request_1.jpg'
+            allow_stretch: True   
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/request_pics/user1_pic4_request_1.jpg'
+            allow_stretch: True  
+        Image:
+            source: 'Profiles/User_1_profile_JOSH/request_pics/user1_pic5_request_1.jpg'
+            allow_stretch: True   
+
+<FindingWindow>:
+    name: 'finding'
+
+    BoxLayout:
+        orientation: 'vertical'
+        GridLayout:
+            rows: 3
+            cols: 2
+
+            Button:
+                text: 'Go Back'
+                background_color: 0, 0, 0, 1
+                on_release: 
+                    app.root.current = 'main'
+                    root.manager.transition.direction = 'right'
+            Label:
+                text: 'Matching'
+                color: 'black'
+            Button:
+                text: 'Press to start'
+                background_color: 0, 0, 0, 1
+                on_release: 
+                    app.load_face2face()
+                    
+            Label:
+                text: 'finding you matches...'
+                color: 'black'
+
+            # Image:
+            #     source: root.j
+            #     allow_stretch: True
+            # Image:
+            #     source: root.k
+            #     allow_stretch: True
+
+            Button:
+                text: 'User PP'
+                background_color: 0, 0, 0, 1
+
+            Button:
+                text: 'Your request pic'
+                background_color: 0, 0, 0, 1

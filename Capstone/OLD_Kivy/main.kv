@@ -1,0 +1,62 @@
+WindowManger:
+    MainWindow:
+    ProfileWindow:
+    RequestWindow:
+    FindingWindow:
+    ResultsWindow:
+
+<MainWindow>:
+    name: 'main'
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Face2Face'
+            color: 'black'
+        Button:
+            text: 'My Profile'
+            #size_hint: .7, .5
+            #pos_hint: {'center_x': .5}
+            on_release: 
+                app.root.current = 'profile'
+<ProfileWindow>:
+    name: 'profile'
+    Button:
+        text: 'Go Back!'
+<RequestWindow>:
+    name: 'request'
+<FindingWindow>:
+    name: 'finding'
+<ResultsWindow>:
+    name: 'results'
+
+#_____OLDER_____
+
+# BoxLayoutExample:
+
+# <BoxLayoutExample>:
+#     orientation: 'vertical'
+#     Label:
+#         text: 'Face2Face'
+#         color: 'black'
+#     Button:
+#         text: 'My Profile'
+#         size_hint: .7, .5
+#         pos_hint: {'center_x': .5}
+#         on_press: profile_pressed()
+#     Button:
+#         text: 'My Requests'
+#         size_hint: .7, .5
+#         pos_hint: {'center_x': .5}
+#     Button:
+#         text: 'Start Matching'
+#         size_hint: .7, .5
+#         pos_hint: {'center_x': .5}
+
+# <MainWidget>:
+#     Button:
+#         text: 'My Profile'
+#         size: '120dp', '70dp'
+#     Button:
+#         text: 'My Requests'
+#         size: '120dp', '70dp'
